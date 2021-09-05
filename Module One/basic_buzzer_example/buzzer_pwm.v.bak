@@ -1,0 +1,31 @@
+// create module
+	module buzzer_pwm (
+	input wire clk, // 50MHz input clock
+	output wire BUZZER, // LED ouput
+	);
+
+// create a binary counter
+	reg [31:0] cnt; // 32-bit counter
+	reg clk_enabler = 0;
+	reg test = 0;
+initial begin
+cnt <= 32'h00000000; // start at zero
+end
+
+always @(posedge clk) begin
+clk_enabler <= 0;
+if (cnt[24]) begin
+clk_enabler  <= 1;
+end
+cnt <= cnt + 1; // count up
+end
+
+//assign LED to 25th bit of the counter to blink the LED at a few Hz
+always @(posedge clk) begin
+	if (clk_enabler)
+		test <= test + 1;
+end
+		
+assign BUZZER = test;
+
+endmodule
