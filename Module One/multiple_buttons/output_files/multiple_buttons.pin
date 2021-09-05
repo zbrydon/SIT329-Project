@@ -227,7 +227,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :         : 3B        :                
 VREFB3BN0                    : AF12      : power  :                   :         : 3B        :                
-drops_button                 : AF13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+hoods_button                 : AF13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AF14      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :         : 4A        :                
 VREFB4AN0                    : AF16      : power  :                   :         : 4A        :                
@@ -251,11 +251,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG5       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG6       :        :                   :         : 3B        :                
 GND                          : AG7       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 4A        :                
-tops_button                  : AG9       : input  : 3.3-V LVTTL       :         : 4A        : Y              
-hoods_button                 : AG10      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+bar_button                   : AG9       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+tops_button                  : AG10      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 4A        :                
 VCCIO4A                      : AG12      : power  :                   : 3.3V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 4A        :                
+drops_button                 : AG13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG14      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG15      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG16      :        :                   :         : 4A        :                
@@ -665,8 +665,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
 GND                          : U12       : gnd    :                   :         :           :                
-seat_button                  : U13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
-bar_button                   : U14       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
+seat_button                  : U14       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 6B        :                
 GND                          : U17       : gnd    :                   :         :           :                

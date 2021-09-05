@@ -51,11 +51,11 @@ set_global_assignment -name VERILOG_FILE multiple_buttons.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AF13 -to drops_button
-set_location_assignment PIN_AG10 -to hoods_button
-set_location_assignment PIN_AG9 -to tops_button
-set_location_assignment PIN_U14 -to bar_button
-set_location_assignment PIN_U13 -to seat_button
+set_location_assignment PIN_AG13 -to drops_button
+set_location_assignment PIN_AF13 -to hoods_button
+set_location_assignment PIN_AG10 -to tops_button
+set_location_assignment PIN_AG9 -to bar_button
+set_location_assignment PIN_U14 -to seat_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to tops_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seat_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hoods_button

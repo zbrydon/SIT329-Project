@@ -1,5 +1,5 @@
 Fitter report for multiple_buttons
-Sun Sep 05 16:05:53 2021
+Sun Sep 05 16:44:31 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Sep 05 16:05:53 2021       ;
+; Fitter Status                   ; Successful - Sun Sep 05 16:44:31 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; multiple_buttons                            ;
 ; Top-level Entity Name           ; multiple_buttons                            ;
@@ -148,7 +148,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -392,12 +392,12 @@ The pin-out file can be found in C:/Users/zacbr/OneDrive/Documents/University/Y3
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; bar_button   ; U14   ; 4A       ; 52           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; bar_button   ; AG9   ; 4A       ; 52           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; clk          ; V11   ; 3B       ; 32           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; drops_button ; AF13  ; 4A       ; 50           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; hoods_button ; AG10  ; 4A       ; 54           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; seat_button  ; U13   ; 4A       ; 52           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; tops_button  ; AG9   ; 4A       ; 52           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; drops_button ; AG13  ; 4A       ; 50           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; hoods_button ; AF13  ; 4A       ; 50           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; seat_button  ; U14   ; 4A       ; 52           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; tops_button  ; AG10  ; 4A       ; 54           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -589,7 +589,7 @@ The pin-out file can be found in C:/Users/zacbr/OneDrive/Documents/University/Y3
 ; AF10     ; 117        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF11     ; 119        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF12     ;            ; 3B             ; VREFB3BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF13     ; 133        ; 4A             ; drops_button                    ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AF13     ; 133        ; 4A             ; hoods_button                    ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AF14     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AF15     ; 143        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF16     ;            ; 4A             ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -613,11 +613,11 @@ The pin-out file can be found in C:/Users/zacbr/OneDrive/Documents/University/Y3
 ; AG6      ; 116        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG7      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG8      ; 134        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG9      ; 139        ; 4A             ; tops_button                     ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AG10     ; 142        ; 4A             ; hoods_button                    ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AG9      ; 139        ; 4A             ; bar_button                      ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AG10     ; 142        ; 4A             ; tops_button                     ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG11     ; 147        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG12     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
-; AG13     ; 135        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG13     ; 135        ; 4A             ; drops_button                    ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG14     ; 155        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG15     ; 158        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 149        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1027,8 +1027,8 @@ The pin-out file can be found in C:/Users/zacbr/OneDrive/Documents/University/Y3
 ; U10      ; 62         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U11      ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U12      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; U13      ; 136        ; 4A             ; seat_button                     ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; U14      ; 138        ; 4A             ; bar_button                      ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; U13      ; 136        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; U14      ; 138        ; 4A             ; seat_button                     ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; U15      ; 278        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U16      ; 276        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U17      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1151,11 +1151,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BOARD_LEDs[2] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; BOARD_LEDs[3] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; BOARD_LEDs[4] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; drops_button  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; hoods_button  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; drops_button  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; hoods_button  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; tops_button   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; bar_button    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; seat_button   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; seat_button   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1166,95 +1166,95 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-------------------+---------+
 ; clk                         ;                   ;         ;
 ; drops_button                ;                   ;         ;
-;      - BOARD_LEDs[0]~output ; 0                 ; 0       ;
+;      - BOARD_LEDs[0]~output ; 1                 ; 0       ;
 ; hoods_button                ;                   ;         ;
-;      - BOARD_LEDs[1]~output ; 1                 ; 0       ;
+;      - BOARD_LEDs[1]~output ; 0                 ; 0       ;
 ; tops_button                 ;                   ;         ;
 ;      - BOARD_LEDs[2]~output ; 1                 ; 0       ;
 ; bar_button                  ;                   ;         ;
 ;      - BOARD_LEDs[3]~output ; 1                 ; 0       ;
 ; seat_button                 ;                   ;         ;
-;      - BOARD_LEDs[4]~output ; 1                 ; 0       ;
+;      - BOARD_LEDs[4]~output ; 0                 ; 0       ;
 +-----------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------+
-; Routing Usage Summary                                               ;
-+---------------------------------------------+-----------------------+
-; Routing Resource Type                       ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Block interconnects                         ; 5 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 4 / 13,420 ( < 1 % )  ;
-; C2 interconnects                            ; 0 / 119,108 ( 0 % )   ;
-; C4 interconnects                            ; 4 / 56,300 ( < 1 % )  ;
-; DQS bus muxes                               ; 0 / 25 ( 0 % )        ;
-; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )        ;
-; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )        ;
-; Direct links                                ; 0 / 289,320 ( 0 % )   ;
-; Global clocks                               ; 0 / 16 ( 0 % )        ;
-; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )         ;
-; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )         ;
-; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )         ;
-; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )         ;
-; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )         ;
-; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )        ;
-; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )        ;
-; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )        ;
-; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )        ;
-; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )        ;
-; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )         ;
-; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )       ;
-; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )       ;
-; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )       ;
-; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )       ;
-; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )       ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )        ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )       ;
-; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )       ;
-; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )        ;
-; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )        ;
-; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )         ;
-; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )       ;
-; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )        ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )         ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )         ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )        ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )         ;
-; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )        ;
-; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )        ;
-; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )        ;
-; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )       ;
-; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )       ;
-; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )         ;
-; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )        ;
-; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )        ;
-; Local interconnects                         ; 0 / 84,580 ( 0 % )    ;
-; Quadrant clocks                             ; 0 / 66 ( 0 % )        ;
-; R14 interconnects                           ; 11 / 12,676 ( < 1 % ) ;
-; R14/C12 interconnect drivers                ; 11 / 20,720 ( < 1 % ) ;
-; R3 interconnects                            ; 0 / 130,992 ( 0 % )   ;
-; R6 interconnects                            ; 9 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 0 / 360 ( 0 % )       ;
-; Wire stub REs                               ; 0 / 15,858 ( 0 % )    ;
-+---------------------------------------------+-----------------------+
++----------------------------------------------------------------------+
+; Routing Usage Summary                                                ;
++---------------------------------------------+------------------------+
+; Routing Resource Type                       ; Usage                  ;
++---------------------------------------------+------------------------+
+; Block interconnects                         ; 5 / 289,320 ( < 1 % )  ;
+; C12 interconnects                           ; 4 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 0 / 119,108 ( 0 % )    ;
+; C4 interconnects                            ; 5 / 56,300 ( < 1 % )   ;
+; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
+; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
+; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
+; Direct links                                ; 0 / 289,320 ( 0 % )    ;
+; Global clocks                               ; 0 / 16 ( 0 % )         ;
+; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
+; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )         ;
+; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )         ;
+; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )         ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )        ;
+; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )         ;
+; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )         ;
+; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )        ;
+; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )         ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )         ;
+; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )        ;
+; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )        ;
+; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
+; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
+; Local interconnects                         ; 0 / 84,580 ( 0 % )     ;
+; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
+; R14 interconnects                           ; 9 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 9 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 2 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 11 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 0 / 360 ( 0 % )        ;
+; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
++---------------------------------------------+------------------------+
 
 
 +------------------------------------------+
@@ -1408,7 +1408,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
@@ -1418,11 +1418,11 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/output_files/multiple_buttons.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6814 megabytes
-    Info: Processing ended: Sun Sep 05 16:05:53 2021
+    Info: Peak virtual memory: 6821 megabytes
+    Info: Processing ended: Sun Sep 05 16:44:31 2021
     Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:01:01
 

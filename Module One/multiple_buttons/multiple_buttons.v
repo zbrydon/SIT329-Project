@@ -35,3 +35,4 @@ module multiple_buttons(
 	assign BOARD_LEDs[4] = seat;
 	
 endmodule
+

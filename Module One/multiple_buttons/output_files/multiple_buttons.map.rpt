@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiple_buttons
-Sun Sep 05 16:05:30 2021
+Sun Sep 05 16:44:08 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 05 16:05:30 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sun Sep 05 16:44:08 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; multiple_buttons                            ;
 ; Top-level Entity Name           ; multiple_buttons                            ;
@@ -254,24 +254,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 05 16:05:23 2021
+    Info: Processing started: Sun Sep 05 16:44:02 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiple_buttons -c multiple_buttons
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file multiple_buttons.v
-    Info (12023): Found entity 1: multiple_buttons File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.v Line: 28
+    Info (12023): Found entity 1: multiple_buttons File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.v Line: 1
 Info (12127): Elaborating entity "multiple_buttons" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.v Line: 29
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.v Line: 2
 Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 5 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Sun Sep 05 16:05:30 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Sun Sep 05 16:44:08 2021
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
 
 
