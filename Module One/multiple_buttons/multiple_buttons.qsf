@@ -51,11 +51,11 @@ set_global_assignment -name VERILOG_FILE multiple_buttons.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_E8 -to drops_button
-set_location_assignment PIN_W12 -to hoods_button
-set_location_assignment PIN_D11 -to tops_button
-set_location_assignment PIN_D8 -to bar_button
-set_location_assignment PIN_AH13 -to seat_button
+set_location_assignment PIN_AF13 -to drops_button
+set_location_assignment PIN_AG10 -to hoods_button
+set_location_assignment PIN_AG9 -to tops_button
+set_location_assignment PIN_U14 -to bar_button
+set_location_assignment PIN_U13 -to seat_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to tops_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seat_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hoods_button
@@ -72,7 +72,5 @@ set_location_assignment PIN_V16 -to BOARD_LEDs[2]
 set_location_assignment PIN_V15 -to BOARD_LEDs[3]
 set_location_assignment PIN_AF26 -to BOARD_LEDs[4]
 set_location_assignment PIN_V11 -to clk
-set_location_assignment PIN_U14 -to reset
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
