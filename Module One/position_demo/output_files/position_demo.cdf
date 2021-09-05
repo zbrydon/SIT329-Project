@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEBA6U23) Path("/home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/output_files/") File("position_demo.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEBA6U23) Path("C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/position_demo/output_files/") File("position_demo.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

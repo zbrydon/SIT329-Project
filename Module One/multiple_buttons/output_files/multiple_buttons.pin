@@ -665,7 +665,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
 GND                          : U12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
+BUZZER                       : U13       : output : 3.3-V LVTTL       :         : 4A        : Y              
 seat_button                  : U14       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 6B        :                

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Sep 05 16:44:08 2021
+Analysis & Synthesis Status : Successful - Sun Sep 05 18:15:38 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : multiple_buttons
 Top-level Entity Name : multiple_buttons
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 11
+Total registers : 17
+Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

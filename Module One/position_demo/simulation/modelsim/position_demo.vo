@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "09/05/2021 17:42:58"
+// DATE "09/05/2021 17:53:45"
 
 // 
 // Device: Altera 5CSEBA6U23I7 Package UFBGA672
@@ -240,7 +240,7 @@ defparam \BUZZER~input .bus_hold = "false";
 defparam \BUZZER~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X74_Y36_N0
+// Location: LABCELL_X42_Y17_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

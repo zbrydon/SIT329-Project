@@ -1,6 +1,6 @@
 vendor_name = ModelSim
-source_file = 1, /home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/position_demo.v
-source_file = 1, /home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/db/position_demo.cbx.xml
+source_file = 1, C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/position_demo/position_demo.v
+source_file = 1, C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/position_demo/db/position_demo.cbx.xml
 design_name = position_demo
 instance = comp, \BOARD_LEDs[0]~output , BOARD_LEDs[0]~output, position_demo, 1
 instance = comp, \BOARD_LEDs[1]~output , BOARD_LEDs[1]~output, position_demo, 1

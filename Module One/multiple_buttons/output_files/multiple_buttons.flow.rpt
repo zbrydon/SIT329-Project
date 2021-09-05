@@ -1,5 +1,5 @@
 Flow report for multiple_buttons
-Sun Sep 05 16:44:42 2021
+Sun Sep 05 18:16:15 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Sep 05 16:44:37 2021       ;
+; Flow Status                     ; Successful - Sun Sep 05 18:16:09 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; multiple_buttons                            ;
 ; Top-level Entity Name           ; multiple_buttons                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 41,910 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 11 / 314 ( 4 % )                            ;
+; Logic utilization (in ALMs)     ; 9 / 41,910 ( < 1 % )                        ;
+; Total registers                 ; 17                                          ;
+; Total pins                      ; 12 / 314 ( 4 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/05/2021 16:44:02 ;
+; Start date & time ; 09/05/2021 18:15:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; multiple_buttons    ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 91767524406.163082424209208            ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 91767524406.163082973227156            ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,11 +94,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4774 MB             ; 00:00:15                           ;
-; Fitter               ; 00:00:22     ; 1.0                     ; 6821 MB             ; 00:01:00                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4834 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5151 MB             ; 00:00:04                           ;
-; Total                ; 00:00:37     ; --                      ; --                  ; 00:01:24                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4858 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:24     ; 1.0                     ; 6879 MB             ; 00:01:06                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4839 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 5207 MB             ; 00:00:04                           ;
+; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

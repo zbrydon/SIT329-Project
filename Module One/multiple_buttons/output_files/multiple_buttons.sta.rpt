@@ -1,5 +1,5 @@
 Timing Analyzer report for multiple_buttons
-Sun Sep 05 16:44:42 2021
+Sun Sep 05 18:16:15 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,16 +45,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  37. Signal Integrity Metrics (Slow 1100mv 100c Model)
  38. Signal Integrity Metrics (Fast 1100mv n40c Model)
  39. Signal Integrity Metrics (Fast 1100mv 100c Model)
- 40. Clock Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
- 47. Unconstrained Input Ports
- 48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 40. Setup Transfers
+ 41. Hold Transfers
+ 42. Report TCCS
+ 43. Report RSKM
+ 44. Unconstrained Paths Summary
+ 45. Clock Status Summary
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Unconstrained Input Ports
+ 49. Unconstrained Output Ports
+ 50. Timing Analyzer Messages
 
 
 
@@ -100,12 +101,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.2%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processors 3-8         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -114,7 +116,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------+--------------------------+
 ; SDC File Path        ; Status ; Read at                  ;
 +----------------------+--------+--------------------------+
-; multiple_buttons.sdc ; OK     ; Sun Sep 05 16:44:39 2021 ;
+; multiple_buttons.sdc ; OK     ; Sun Sep 05 18:16:12 2021 ;
 +----------------------+--------+--------------------------+
 
 
@@ -127,10 +129,14 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
----------------------------------------
-; Slow 1100mV 100C Model Fmax Summary ;
----------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1100mV 100C Model Fmax Summary              ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 380.66 MHz ; 380.66 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 ----------------------------------
@@ -139,16 +145,22 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
-----------------------------------------
++--------------------------------------+
 ; Slow 1100mV 100C Model Setup Summary ;
-----------------------------------------
-No paths to report.
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; clk   ; 17.373 ; 0.000               ;
++-------+--------+---------------------+
 
 
----------------------------------------
++-------------------------------------+
 ; Slow 1100mV 100C Model Hold Summary ;
----------------------------------------
-No paths to report.
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.408 ; 0.000               ;
++-------+-------+---------------------+
 
 
 -------------------------------------------
@@ -163,10 +175,13 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------------------
++----------------------------------------------------+
 ; Slow 1100mV 100C Model Minimum Pulse Width Summary ;
-------------------------------------------------------
-No paths to report.
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 9.175 ; 0.000                              ;
++-------+-------+------------------------------------+
 
 
 ------------------------------------------------
@@ -175,22 +190,32 @@ No paths to report.
 No synchronizer chains to report.
 
 
----------------------------------------
-; Slow 1100mV -40C Model Fmax Summary ;
----------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1100mV -40C Model Fmax Summary              ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 349.65 MHz ; 349.65 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------------------
++--------------------------------------+
 ; Slow 1100mV -40C Model Setup Summary ;
-----------------------------------------
-No paths to report.
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; clk   ; 17.140 ; 0.000               ;
++-------+--------+---------------------+
 
 
----------------------------------------
++-------------------------------------+
 ; Slow 1100mV -40C Model Hold Summary ;
----------------------------------------
-No paths to report.
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.433 ; 0.000               ;
++-------+-------+---------------------+
 
 
 -------------------------------------------
@@ -205,10 +230,13 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------------------
++----------------------------------------------------+
 ; Slow 1100mV -40C Model Minimum Pulse Width Summary ;
-------------------------------------------------------
-No paths to report.
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 9.297 ; 0.000                              ;
++-------+-------+------------------------------------+
 
 
 ------------------------------------------------
@@ -217,16 +245,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
-----------------------------------------
++--------------------------------------+
 ; Fast 1100mV 100C Model Setup Summary ;
-----------------------------------------
-No paths to report.
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; clk   ; 18.786 ; 0.000               ;
++-------+--------+---------------------+
 
 
----------------------------------------
++-------------------------------------+
 ; Fast 1100mV 100C Model Hold Summary ;
----------------------------------------
-No paths to report.
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.186 ; 0.000               ;
++-------+-------+---------------------+
 
 
 -------------------------------------------
@@ -241,10 +275,13 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------------------
++----------------------------------------------------+
 ; Fast 1100mV 100C Model Minimum Pulse Width Summary ;
-------------------------------------------------------
-No paths to report.
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 9.108 ; 0.000                              ;
++-------+-------+------------------------------------+
 
 
 ------------------------------------------------
@@ -253,16 +290,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
-----------------------------------------
++--------------------------------------+
 ; Fast 1100mV -40C Model Setup Summary ;
-----------------------------------------
-No paths to report.
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; clk   ; 18.821 ; 0.000               ;
++-------+--------+---------------------+
 
 
----------------------------------------
++-------------------------------------+
 ; Fast 1100mV -40C Model Hold Summary ;
----------------------------------------
-No paths to report.
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.173 ; 0.000               ;
++-------+-------+---------------------+
 
 
 -------------------------------------------
@@ -277,10 +320,13 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------------------
++----------------------------------------------------+
 ; Fast 1100mV -40C Model Minimum Pulse Width Summary ;
-------------------------------------------------------
-No paths to report.
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 9.050 ; 0.000                              ;
++-------+-------+------------------------------------+
 
 
 ------------------------------------------------
@@ -289,14 +335,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 17.140 ; 0.173 ; N/A      ; N/A     ; 9.050               ;
+;  clk             ; 17.140 ; 0.173 ; N/A      ; N/A     ; 9.050               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -309,6 +357,7 @@ No synchronizer chains to report.
 ; BOARD_LEDs[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; BOARD_LEDs[3] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; BOARD_LEDs[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; BUZZER        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -317,12 +366,12 @@ No synchronizer chains to report.
 +--------------+--------------+-----------------+-----------------+
 ; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------------+--------------+-----------------+-----------------+
-; clk          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; drops_button ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; hoods_button ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; tops_button  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; bar_button   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; seat_button  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; clk          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +--------------+--------------+-----------------+-----------------+
 
 
@@ -336,6 +385,7 @@ No synchronizer chains to report.
 ; BOARD_LEDs[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-08 V                      ; 3.17 V              ; -0.245 V            ; 0.166 V                              ; 0.398 V                              ; 4.33e-10 s                  ; 1.46e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-08 V                     ; 3.17 V             ; -0.245 V           ; 0.166 V                             ; 0.398 V                             ; 4.33e-10 s                 ; 1.46e-10 s                 ; Yes                       ; No                        ;
 ; BOARD_LEDs[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
 ; BOARD_LEDs[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.306 V            ; 0.142 V                              ; 0.425 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.306 V           ; 0.142 V                             ; 0.425 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
+; BUZZER        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -349,6 +399,7 @@ No synchronizer chains to report.
 ; BOARD_LEDs[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.87e-05 V                   ; 3.11 V              ; -0.0814 V           ; 0.131 V                              ; 0.136 V                              ; 5.88e-10 s                  ; 3.2e-10 s                   ; Yes                        ; Yes                        ; 3.08 V                      ; 3.87e-05 V                  ; 3.11 V             ; -0.0814 V          ; 0.131 V                             ; 0.136 V                             ; 5.88e-10 s                 ; 3.2e-10 s                  ; Yes                       ; Yes                       ;
 ; BOARD_LEDs[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
 ; BOARD_LEDs[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.104 V            ; 0.101 V                              ; 0.139 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.104 V           ; 0.101 V                             ; 0.139 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
+; BUZZER        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -362,6 +413,7 @@ No synchronizer chains to report.
 ; BOARD_LEDs[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.64e-07 V                   ; 3.74 V              ; -0.508 V            ; 0.391 V                              ; 0.647 V                              ; 3.08e-10 s                  ; 1.34e-10 s                  ; No                         ; No                         ; 3.63 V                      ; 4.64e-07 V                  ; 3.74 V             ; -0.508 V           ; 0.391 V                             ; 0.647 V                             ; 3.08e-10 s                 ; 1.34e-10 s                 ; No                        ; No                        ;
 ; BOARD_LEDs[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
 ; BOARD_LEDs[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.588 V            ; 0.329 V                              ; 0.704 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.588 V           ; 0.329 V                             ; 0.704 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
+; BUZZER        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -375,13 +427,28 @@ No synchronizer chains to report.
 ; BOARD_LEDs[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000395 V                   ; 3.65 V              ; -0.232 V            ; 0.065 V                              ; 0.547 V                              ; 4.68e-10 s                  ; 2.07e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000395 V                  ; 3.65 V             ; -0.232 V           ; 0.065 V                             ; 0.547 V                             ; 4.68e-10 s                 ; 2.07e-10 s                 ; Yes                       ; No                        ;
 ; BOARD_LEDs[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
 ; BOARD_LEDs[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.289 V            ; 0.051 V                              ; 0.523 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.289 V           ; 0.051 V                             ; 0.523 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
+; BUZZER        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 153      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 153      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -404,9 +471,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 5     ; 5    ;
-; Unconstrained Output Ports      ; 5     ; 5    ;
-; Unconstrained Output Port Paths ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 22    ; 22   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
 
 
@@ -442,6 +509,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; BOARD_LEDs[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; BOARD_LEDs[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; BOARD_LEDs[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BUZZER        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
 
@@ -468,6 +536,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; BOARD_LEDs[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; BOARD_LEDs[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; BOARD_LEDs[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BUZZER        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
 
@@ -477,7 +546,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 05 16:44:38 2021
+    Info: Processing started: Sun Sep 05 18:16:10 2021
 Info: Command: quartus_sta multiple_buttons -c multiple_buttons
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -489,47 +558,81 @@ Warning (332174): Ignored filter at multiple_buttons.sdc(10): LED could not be m
 Warning (332049): Ignored set_false_path at multiple_buttons.sdc(10): Argument <to> is an empty collection File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.sdc Line: 10
     Info (332050): set_false_path -from * -to [get_ports LED] File: C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module One/multiple_buttons/multiple_buttons.sdc Line: 10
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 100C Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 17.373
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.373               0.000 clk 
+Info (332146): Worst-case hold slack is 0.408
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.408               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.175
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.175               0.000 clk 
 Info: Analyzing Slow 1100mV -40C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.140
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.140               0.000 clk 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.297
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.297               0.000 clk 
 Info: Analyzing Fast 1100mV 100C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 18.786
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    18.786               0.000 clk 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.108
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.108               0.000 clk 
 Info: Analyzing Fast 1100mV -40C Model
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 18.821
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    18.821               0.000 clk 
+Info (332146): Worst-case hold slack is 0.173
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.173               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.050
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.050               0.000 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 5151 megabytes
-    Info: Processing ended: Sun Sep 05 16:44:42 2021
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5207 megabytes
+    Info: Processing ended: Sun Sep 05 18:16:15 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 
