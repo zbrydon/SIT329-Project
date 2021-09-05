@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, /home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/position_demo.v
+source_file = 1, /home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/db/position_demo.cbx.xml
+design_name = position_demo
+instance = comp, \BOARD_LEDs[0]~output , BOARD_LEDs[0]~output, position_demo, 1
+instance = comp, \BOARD_LEDs[1]~output , BOARD_LEDs[1]~output, position_demo, 1
+instance = comp, \BOARD_LEDs[2]~output , BOARD_LEDs[2]~output, position_demo, 1
+instance = comp, \BOARD_LEDs[3]~output , BOARD_LEDs[3]~output, position_demo, 1
+instance = comp, \BOARD_LEDs[4]~output , BOARD_LEDs[4]~output, position_demo, 1
+instance = comp, \drops_button~input , drops_button~input, position_demo, 1
+instance = comp, \hoods_button~input , hoods_button~input, position_demo, 1
+instance = comp, \tops_button~input , tops_button~input, position_demo, 1
+instance = comp, \bar_button~input , bar_button~input, position_demo, 1
+instance = comp, \seat_button~input , seat_button~input, position_demo, 1
+instance = comp, \clk~input , clk~input, position_demo, 1
+instance = comp, \BUZZER~input , BUZZER~input, position_demo, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, position_demo, 1

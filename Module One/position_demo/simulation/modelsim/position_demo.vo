@@ -1,0 +1,266 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+// DATE "09/05/2021 17:42:58"
+
+// 
+// Device: Altera 5CSEBA6U23I7 Package UFBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module position_demo (
+	clk,
+	drops_button,
+	hoods_button,
+	tops_button,
+	bar_button,
+	seat_button,
+	BUZZER,
+	BOARD_LEDs);
+input 	clk;
+input 	drops_button;
+input 	hoods_button;
+input 	tops_button;
+input 	bar_button;
+input 	seat_button;
+input 	BUZZER;
+output 	[4:0] BOARD_LEDs;
+
+// Design Ports Information
+// clk	=>  Location: PIN_V11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BUZZER	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BOARD_LEDs[0]	=>  Location: PIN_W15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// BOARD_LEDs[1]	=>  Location: PIN_AA24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// BOARD_LEDs[2]	=>  Location: PIN_V16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// BOARD_LEDs[3]	=>  Location: PIN_V15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// BOARD_LEDs[4]	=>  Location: PIN_AF26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// drops_button	=>  Location: PIN_AG13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hoods_button	=>  Location: PIN_AF13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// tops_button	=>  Location: PIN_AG10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bar_button	=>  Location: PIN_AG9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// seat_button	=>  Location: PIN_U14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clk~input_o ;
+wire \BUZZER~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \drops_button~input_o ;
+wire \hoods_button~input_o ;
+wire \tops_button~input_o ;
+wire \bar_button~input_o ;
+wire \seat_button~input_o ;
+
+
+// Location: IOOBUF_X89_Y8_N22
+cyclonev_io_obuf \BOARD_LEDs[0]~output (
+	.i(\drops_button~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(BOARD_LEDs[0]),
+	.obar());
+// synopsys translate_off
+defparam \BOARD_LEDs[0]~output .bus_hold = "false";
+defparam \BOARD_LEDs[0]~output .open_drain_output = "false";
+defparam \BOARD_LEDs[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N39
+cyclonev_io_obuf \BOARD_LEDs[1]~output (
+	.i(\hoods_button~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(BOARD_LEDs[1]),
+	.obar());
+// synopsys translate_off
+defparam \BOARD_LEDs[1]~output .bus_hold = "false";
+defparam \BOARD_LEDs[1]~output .open_drain_output = "false";
+defparam \BOARD_LEDs[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N5
+cyclonev_io_obuf \BOARD_LEDs[2]~output (
+	.i(\tops_button~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(BOARD_LEDs[2]),
+	.obar());
+// synopsys translate_off
+defparam \BOARD_LEDs[2]~output .bus_hold = "false";
+defparam \BOARD_LEDs[2]~output .open_drain_output = "false";
+defparam \BOARD_LEDs[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N22
+cyclonev_io_obuf \BOARD_LEDs[3]~output (
+	.i(\bar_button~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(BOARD_LEDs[3]),
+	.obar());
+// synopsys translate_off
+defparam \BOARD_LEDs[3]~output .bus_hold = "false";
+defparam \BOARD_LEDs[3]~output .open_drain_output = "false";
+defparam \BOARD_LEDs[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N79
+cyclonev_io_obuf \BOARD_LEDs[4]~output (
+	.i(\seat_button~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(BOARD_LEDs[4]),
+	.obar());
+// synopsys translate_off
+defparam \BOARD_LEDs[4]~output .bus_hold = "false";
+defparam \BOARD_LEDs[4]~output .open_drain_output = "false";
+defparam \BOARD_LEDs[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y0_N41
+cyclonev_io_ibuf \drops_button~input (
+	.i(drops_button),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\drops_button~input_o ));
+// synopsys translate_off
+defparam \drops_button~input .bus_hold = "false";
+defparam \drops_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y0_N58
+cyclonev_io_ibuf \hoods_button~input (
+	.i(hoods_button),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hoods_button~input_o ));
+// synopsys translate_off
+defparam \hoods_button~input .bus_hold = "false";
+defparam \hoods_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N35
+cyclonev_io_ibuf \tops_button~input (
+	.i(tops_button),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\tops_button~input_o ));
+// synopsys translate_off
+defparam \tops_button~input .bus_hold = "false";
+defparam \tops_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N35
+cyclonev_io_ibuf \bar_button~input (
+	.i(bar_button),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bar_button~input_o ));
+// synopsys translate_off
+defparam \bar_button~input .bus_hold = "false";
+defparam \bar_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N1
+cyclonev_io_ibuf \seat_button~input (
+	.i(seat_button),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\seat_button~input_o ));
+// synopsys translate_off
+defparam \seat_button~input .bus_hold = "false";
+defparam \seat_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N1
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N18
+cyclonev_io_ibuf \BUZZER~input (
+	.i(BUZZER),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\BUZZER~input_o ));
+// synopsys translate_off
+defparam \BUZZER~input .bus_hold = "false";
+defparam \BUZZER~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X74_Y36_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

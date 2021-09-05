@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at position_demo.v(53): always construct contains both blocking and non-blocking assignments File: /home/rileyd/Documents/Deakin/SIT329/Project/SIT329-Project/Module One/position_demo/position_demo.v Line: 53
