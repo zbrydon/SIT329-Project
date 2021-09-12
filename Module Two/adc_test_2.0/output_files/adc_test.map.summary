@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Sep 10 17:14:14 2021
+Analysis & Synthesis Status : Successful - Sun Sep 12 14:27:53 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : adc_test
 Top-level Entity Name : adc_demo_mega
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 68
-Total pins : 14
+Total registers : 71
+Total pins : 13
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

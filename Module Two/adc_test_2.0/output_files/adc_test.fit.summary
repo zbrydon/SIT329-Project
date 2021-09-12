@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Sep 10 17:14:41 2021
+Fitter Status : Successful - Sun Sep 12 14:22:51 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : adc_test
 Top-level Entity Name : adc_demo_mega
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 37 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 44 / 41,910 ( < 1 % )
 Total registers : 85
 Total pins : 14 / 314 ( 4 % )
 Total virtual pins : 0
