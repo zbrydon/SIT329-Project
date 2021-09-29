@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="dbf4b2001e2dcd27ff0a"/>
+  </project>
+  <file_info>
+    <file device="5CSEBA6U23I7" path="final.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="adc_demo_mega:angle_moisture|adc_control:ADC" name="ADC">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME adc_control HAS_SOPCINFO 1 GENERATION_ID 1632886627"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
