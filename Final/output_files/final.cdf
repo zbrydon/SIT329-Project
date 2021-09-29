@@ -4,9 +4,9 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Ign)
-		Device PartName(5CSEBA6U23) MfrSpec(OpMask(0) FullPath("C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Three/Final/output_files/final.sof"));
+		Device PartName(5CSEBA6U23) MfrSpec(OpMask(0) FullPath("C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Final/output_files/final.sof"));
 	P ActionCode(Cfg)
-		Device PartName(5CSEBA6U23) Path("C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Three/Final/output_files/") File("final.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEBA6U23) Path("C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Final/output_files/") File("final.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
