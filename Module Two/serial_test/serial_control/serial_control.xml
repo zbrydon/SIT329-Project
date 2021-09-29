@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2021.09.12.16:56:00"
+ outputDirectory="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEBA6U23I7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="rs232_0_avalon_rs232_slave" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="8" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="1" />
+   <property name="readWaitStates" value="0" />
+   <property name="readWaitTime" value="0" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="rs232_0_address" direction="input" role="address" width="1" />
+   <port
+       name="rs232_0_chipselect"
+       direction="input"
+       role="chipselect"
+       width="1" />
+   <port
+       name="rs232_0_byteenable"
+       direction="input"
+       role="byteenable"
+       width="4" />
+   <port name="rs232_0_read" direction="input" role="read" width="1" />
+   <port name="rs232_0_write" direction="input" role="write" width="1" />
+   <port
+       name="rs232_0_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port name="rs232_0_readdata" direction="output" role="readdata" width="32" />
+  </interface>
+  <interface name="rs232_0_external_interface" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="rs232_0_UART_RXD" direction="input" role="RXD" width="1" />
+   <port name="rs232_0_UART_TXD" direction="output" role="TXD" width="1" />
+  </interface>
+  <interface name="rs232_0_interrupt" kind="interrupt" start="0">
+   <property
+       name="associatedAddressablePoint"
+       value="serial_control.rs232_0_avalon_rs232_slave" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bridgedReceiverOffset" value="0" />
+   <property name="bridgesToReceiver" value="" />
+   <property name="irqScheme" value="NONE" />
+   <port name="rs232_0_irq" direction="output" role="irq" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="serial_control:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1631429759,AUTO_UNIQUE_ID=(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_up_avalon_rs232:17.1:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone V,avalon_bus_type=Memory Mapped,baud=9600,data_bits=8,parity=None,ref_clk_freq=5.0E7,stop_bits=1)(clock:20.1:)(reset:20.1:)"
+   instancePathKey="serial_control"
+   kind="serial_control"
+   version="1.0"
+   name="serial_control">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1631429759" />
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/serial_control.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_counters.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_in_deserializer.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_out_serializer.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_sync_fifo.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/serial_control_rs232_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/altera_up_avalon_rs232_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_counters.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_in_deserializer.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_out_serializer.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_sync_fifo.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="serial_control">queue size: 0 starting:serial_control "serial_control"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
+   <message level="Debug" culprit="serial_control"><![CDATA["<b>serial_control</b>" reuses <b>altera_up_avalon_rs232</b> "<b>submodules/serial_control_rs232_0</b>"]]></message>
+   <message level="Debug" culprit="serial_control"><![CDATA["<b>serial_control</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="serial_control">queue size: 1 starting:altera_up_avalon_rs232 "submodules/serial_control_rs232_0"</message>
+   <message level="Info" culprit="rs232_0">Starting Generation of RS232 UART</message>
+   <message level="Info" culprit="rs232_0"><![CDATA["<b>serial_control</b>" instantiated <b>altera_up_avalon_rs232</b> "<b>rs232_0</b>"]]></message>
+   <message level="Debug" culprit="serial_control">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>serial_control</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_rs232:17.1:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone V,avalon_bus_type=Memory Mapped,baud=9600,data_bits=8,parity=None,ref_clk_freq=5.0E7,stop_bits=1"
+   instancePathKey="serial_control:.:rs232_0"
+   kind="altera_up_avalon_rs232"
+   version="17.1"
+   name="serial_control_rs232_0">
+  <parameter name="baud" value="9600" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="stop_bits" value="1" />
+  <parameter name="ref_clk_freq" value="5.0E7" />
+  <parameter name="avalon_bus_type" value="Memory Mapped" />
+  <parameter name="data_bits" value="8" />
+  <parameter name="parity" value="None" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <generatedFiles>
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_counters.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_in_deserializer.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_rs232_out_serializer.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_up_sync_fifo.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/serial_control_rs232_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/altera_up_avalon_rs232_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_counters.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_in_deserializer.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_rs232_out_serializer.v" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/communication/altera_up_avalon_rs232/hdl/altera_up_sync_fifo.v" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="serial_control" as="rs232_0" />
+  <messages>
+   <message level="Debug" culprit="serial_control">queue size: 1 starting:altera_up_avalon_rs232 "submodules/serial_control_rs232_0"</message>
+   <message level="Info" culprit="rs232_0">Starting Generation of RS232 UART</message>
+   <message level="Info" culprit="rs232_0"><![CDATA["<b>serial_control</b>" instantiated <b>altera_up_avalon_rs232</b> "<b>rs232_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:20.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="serial_control:.:rst_controller"
+   kind="altera_reset_controller"
+   version="20.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/zacbr/OneDrive/Documents/University/Y3/T2/Advanced Embedded Systems/SIT329-Project/Module Two/serial_test/serial_control/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="serial_control" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="serial_control">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>serial_control</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="3dbeb97bc2d837b28238"/>
+  </project>
+  <file_info>
+    <file device="5CSEBA6U23I7" path="test.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="serial_control:serial" name="serial">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME serial_control HAS_SOPCINFO 1 GENERATION_ID 1631685372"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
