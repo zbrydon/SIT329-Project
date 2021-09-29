@@ -14,14 +14,14 @@ module Temp(
     );
 
 
-	reg DHT_OUT, DIR, WAIT;  //Registrador de saida	
-	reg [20:0] COUNTER; //Contador de ciclos para gerar delays
+	reg DHT_OUT, DIR, WAIT;
+	reg [20:0] COUNTER; 
 	reg [4:0] index;
-	reg [39:0] INTDATA; //registrador de dados interno
+	reg [39:0] INTDATA;
 	
 	//wire DHT_IN;
 	
-	assign DHT_DATA = DIR ? DHT_OUT : 1'bZ; // Se DIR 1 -- copia DHT_OUT para saida, caso nao, deixa o pino indefinido para atuar como entrada
+	assign DHT_DATA = DIR ? DHT_OUT : 1'bZ;
 	//assign DHT_IN = DHT_DATA;
 	
 	assign TEMP_INT[0] = INTDATA[16];  
@@ -49,7 +49,7 @@ module Temp(
 			  DHT_OUT <= 1'b0;			  
 			  WAIT <= 1'b0;
 			  COUNTER <= 20'b0;	
-			  DIR <= 1'b1;			   //Configura pino saida
+			  DIR <= 1'b1;			   
 			  STATE <= S0;
 		 end else begin
 		 
@@ -113,12 +113,12 @@ module Temp(
 						if ( DHT_DATA == 1)
 						begin
 							STATE <= S6;
-							index <= 5'b0; //reseta indexador
+							index <= 5'b0;
 						end else begin
 							STATE <= S5;
 						end
 					end
-			//Inicio da analise de dados
+			
 				S6:
 					begin
 						if ( DHT_DATA == 0)
